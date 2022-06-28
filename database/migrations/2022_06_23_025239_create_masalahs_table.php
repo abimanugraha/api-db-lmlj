@@ -21,6 +21,7 @@ class CreateMasalahsTable extends Migration
             $table->foreignId('unit_id')->nullable(); // Unit Tujuan
             // $table->foreignId('media_id');
             // $table->foreignId('detail_id');
+            $table->text('masalah');
             $table->text('nilai_tambah');
             $table->tinyInteger('urgensi');
             $table->foreignId('user_id')->nullable();

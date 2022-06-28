@@ -15,13 +15,14 @@ class MasalahFactory extends Factory
     {
         return [
             'nolmlj' => $this->faker->unique()->numerify('UNIT-LMLJ/##/22/-###'),
-            'produk_id' => $this->faker->numberBetween(0, 9),
-            'komponen_id' => $this->faker->numberBetween(0, 29),
-            'unit_id' => $this->faker->numberBetween(0, 3),
-            'nilai_tambah' => $this->faker->sentence(4),
-            'urgensi' => $this->faker->numberBetween(0, 3),
-            'user_id' => $this->faker->numberBetween(0, 3),
-            'status' => $this->faker->numberBetween(0, 2),
+            'produk_id' => $this->faker->numberBetween(1, 9),
+            'komponen_id' => $this->faker->numberBetween(1, 29),
+            'unit_id' => $this->faker->numberBetween(1, 9),
+            'masalah' => $this->faker->sentence(3),
+            'nilai_tambah' => $this->faker->sentence(5),
+            'urgensi' => $this->faker->numberBetween(1, 3),
+            'user_id' => $this->faker->numberBetween(1, 3),
+            'status' => $this->faker->numberBetween(0, 1),
             'keterangan' => $this->faker->sentence(6),
         ];
     }

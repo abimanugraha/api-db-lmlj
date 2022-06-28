@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rules\Unique;
 
@@ -18,11 +19,11 @@ class UserFactory extends Factory
         return [
             'nama' => $this->faker->name(),
             'username' => $this->faker->unique()->userName(),
-            'password' => "12345", // password
-            'role_id' => $this->faker->numberBetween(0, 2),
-            'unit_id' => $this->faker->numberBetween(0, 2),
+            'password' => Hash::make("12345"), // password
+            'role_id' => $this->faker->numberBetween(1, 2),
+            'unit_id' => $this->faker->numberBetween(1, 4),
             'picture' => 'user.png'
-        ];       
+        ];
     }
 
     /**

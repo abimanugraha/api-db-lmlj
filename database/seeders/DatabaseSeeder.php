@@ -13,6 +13,7 @@ use Illuminate\Database\Seeder;
 use \App\Models\User;
 use \App\Models\Role;
 use App\Models\Unit;
+use App\Models\Analisa;
 
 class DatabaseSeeder extends Seeder
 {
@@ -31,7 +32,8 @@ class DatabaseSeeder extends Seeder
         Produk::factory(10)->create();
         Komponen::factory(20)->create();
         Masalah::factory(14)->create();
-        Jawaban::factory(26)->create();
+        Jawaban::factory(50)->create();
         Perbaikan::factory(48)->create();
+        Analisa::factory(100)->create();
     }
 }

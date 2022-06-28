@@ -15,7 +15,7 @@ class AnalisaFactory extends Factory
     {
         return [
             'jawaban_id' => $this->faker->numberBetween(1, 50),
-            'detail' => $this->faker->text(50),
+            'analisa' => $this->faker->text(50),
         ];
     }
 }

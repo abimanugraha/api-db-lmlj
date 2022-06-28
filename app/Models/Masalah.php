@@ -14,34 +14,39 @@ class Masalah extends Model
     {
         return $this->hasMany(Jawaban::class);
     }
-    
+
     public function detailmasalah()
     {
         return $this->hasMany(DetailMasalah::class);
     }
-    
+
     public function media()
     {
         return $this->hasMany(Media::class);
     }
-    
+
     public function produk()
     {
         return $this->belongsTo(Produk::class);
     }
-    
+
     public function komponen()
     {
         return $this->belongsTo(komponen::class);
     }
-    
+
     public function unit()
     {
         return $this->belongsTo(Unit::class);
     }
-    
-    public function user()
+
+    public function pengaju()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'pengaju_id');
+    }
+
+    public function diketahui()
+    {
+        return $this->belongsTo(User::class, 'ygmengetahui_id');
     }
 }

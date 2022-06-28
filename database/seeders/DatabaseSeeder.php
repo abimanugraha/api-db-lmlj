@@ -30,8 +30,8 @@ class DatabaseSeeder extends Seeder
         Media::factory(60)->create();
         DetailMasalah::factory(30)->create();
         Produk::factory(10)->create();
-        Komponen::factory(20)->create();
-        Masalah::factory(14)->create();
+        Komponen::factory(30)->create();
+        Masalah::factory(15)->create();
         Jawaban::factory(50)->create();
         Perbaikan::factory(48)->create();
         Analisa::factory(100)->create();

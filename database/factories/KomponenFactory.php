@@ -14,8 +14,8 @@ class KomponenFactory extends Factory
     public function definition()
     {
         return [
-            'masalah_id' => $this->faker->numberBetween(0, 2),
-            'produk_id' => $this->faker->numberBetween(0, 2),
+            // 'masalah_id' => $this->faker->numberBetween(0, 2),
+            'produk_id' => $this->faker->numberBetween(1, 10),
             'nama' => $this->faker->unique()->word(),
             'nomor' => $this->faker->numerify('#####'),
         ];

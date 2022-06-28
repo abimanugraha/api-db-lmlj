@@ -24,7 +24,8 @@ class CreateMasalahsTable extends Migration
             $table->text('masalah');
             $table->text('nilai_tambah');
             $table->tinyInteger('urgensi');
-            $table->foreignId('user_id')->nullable();
+            $table->foreignId('pengaju_id');
+            $table->foreignId('ygmengetahui_id');
             $table->timestamp('tanggal_diterima');
             $table->tinyInteger('status');
             $table->string('keterangan');
